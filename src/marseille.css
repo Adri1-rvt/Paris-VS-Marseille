@@ -1,3 +1,9 @@
+html {
+    scroll-behavior: smooth;
+
+}
+
+
 body {
     margin: 0;
     height: 100%;
@@ -55,3 +61,72 @@ nav li a:hover {
 
 
 /* Sommaire */
+.sommaire {
+    width: 80%;
+    margin: auto;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.Titre2 {
+    font-size: 50px;
+    font-family: 'Abril FatFace', serif;
+    font-weight: 100;
+    position: relative;
+    margin-bottom: 40px;
+
+}
+
+.Titre2::before  {
+    background-color: #3A7CA5;
+    content:"" ;
+    position: absolute;
+    width: 50px;
+    height: 7px;
+    bottom: 0;
+
+}
+
+.sommaire ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.sommaire li {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    width: 100%;  /* Assure que l'élément prenne toute la largeur */
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 8px;
+    max-width: 100%;
+    transition: background-color 0.3s ease; /* Transition pour la couleur de fond */
+    display: flex;  /* Flexbox pour s'assurer que l'élément prend toute la largeur */
+}
+
+.sommaire li:hover {
+    background-color: #bb8d57;  /* Fond visible au survol */
+}
+
+.sommaire a {
+    width: 100%;  /* Prendre toute la largeur de l'élément parent */
+    display: block;  /* Fais en sorte que l'élément <a> prenne toute la hauteur et largeur */
+    text-decoration: none;
+    color: #2F6690;
+}
+
+
+.droite {
+    align-self: flex-end;
+    text-align: right;
+}
+
+.gauche {
+    align-self: flex-start;
+    text-align: left;
+}
+
