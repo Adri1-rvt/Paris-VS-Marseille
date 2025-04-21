@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    height: 100%;
+}
+
+
+/* haut de Page */
+header {
+    background-image: url("../img/4.jpg");
+    background-size: cover;
+    height: 94vh;
+    padding: 25px;
+    font-family: "Times New Roman", Times, serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Titre {
+    color: #bb8d57;
+    font-size: 7rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    text-decoration: underline;
+    margin: 0;
+}
+
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+    background-color: #3A7CA5;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+nav li a:hover {
+    color: #bb8d57;
+}
+
+
+/* Sommaire */
