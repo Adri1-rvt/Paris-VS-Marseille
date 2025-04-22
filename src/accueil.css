@@ -12,10 +12,62 @@ body {
     background-color: #3a7ca5;
 }
 
-img {
+#bannière {
+    padding-top: 5%;
     width: 100%;
+    border: 10px solid;
+    border-color : #d9dcd6;
 }
 
-a {
-    align: right;
+p {
+    color: #d9dcd6;
+    margin: 2% 4%;
+    font-size: 2vw;
+    line-height: 150%;
+    text-align: justify;
+}
+
+h1 {
+    color: #d9dcd6;
+    margin: 2% 4%;
+    font-size: 3vw;
+    text-align: left;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2%;
+    background: #16425b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 10px solid;
+    border-color : #3a7ca5;
+}
+
+.logo {
+    font-size: 200%;
+    color: #d9dcd6;
+    font-weight: 600;
+    cursor: default;
+}
+
+nav a {
+    size: 200%;
+    font-size: 2vw;
+    color: #d9dcd6;
+    margin-left: 4rem;
+}
+
+footer {
+    display: flex;
+    padding: 2%;
+    background: #16425b;
+}
+
+footer p {
+    font-size: 2vw;
 }
