@@ -1,0 +1,216 @@
+html {
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+
+/* haut de Page */
+header {
+    background-image: url("../img/4.jpg");
+    background-size: cover;
+    height: 94vh;
+    padding: 25px;
+    font-family: "Times New Roman", Times, serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Titre {
+    color: #bb8d57;
+    font-size: 7rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    text-decoration: underline;
+    margin: 0;
+}
+
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+    border-radius: 15px;
+    background-color: #3A7CA5;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 70px;
+
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+nav li a:hover {
+    color: #bb8d57;
+}
+
+
+/* Titre */
+.Titre2 {
+    font-size: 50px;
+    font-family: 'Abril FatFace', serif;
+    font-weight: 100;
+    position: relative;
+    margin-bottom: 40px;
+
+}
+
+.Titre2::before  {
+    background-color: #3A7CA5;
+    content:"" ;
+    position: absolute;
+    width: 50px;
+    height: 7px;
+    bottom: 0;
+
+}
+
+/* Sommaire */
+.sommaire {
+    padding: 50px 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+
+}
+#video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.sommaire .content {
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+    text-align: center;
+    color: white;
+}
+
+.sommaire .sommaire-m {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+.sommaire-m {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+
+.sommaire-m li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    transition: color 0.3s ease;
+}
+
+.sommaire-m li a {
+    text-decoration: none;
+    color: #3A7CA5;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+
+}
+
+.sommaire-m li a:hover {
+    color: #bb8d57;
+}
+
+.m1 { grid-column: 1; grid-row: 3; }
+.m2 { grid-column: 2; grid-row: 2; }
+.m3 { grid-column: 3; grid-row: 1; }
+.m4 { grid-column: 4; grid-row: 2; }
+.m5 { grid-column: 5; grid-row: 3; }
+.m6 { grid-column: 6; grid-row: 2; }
+.m7 { grid-column: 7; grid-row: 1; }
+.m8 { grid-column: 8; grid-row: 2; }
+.m9 { grid-column: 9; grid-row: 3; }
+
+
+/* Introduction */
+.hoverMap {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color : #3A7CA5;
+}
+
+.hoverMap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    background-image: url('../img/Carte_M.png');
+    background-size: cover;
+    background-position: center;
+    display: none;
+    pointer-events: none;
+    border: 2px solid #3A7CA5;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.hoverMap:hover::after {
+    display: block;
+}
+
+.hoverMap:hover {
+    position: relative;
+}
+
+.hoverMap:hover::after {
+    display: block;
+    top: 50%;
+    left: 50%;
+}
+
+
+
+
+#Introduction {
+    margin-top: -230px;
+}
