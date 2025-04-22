@@ -146,10 +146,11 @@ nav li a:hover {
 
 .sommaire-m li a {
     text-decoration: none;
-    color: #2F6690;
+    color: #3A7CA5;
     font-weight: bold;
     font-size: 1.2rem;
     transition: color 0.3s ease;
+
 }
 
 .sommaire-m li a:hover {
