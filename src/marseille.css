@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+
 html {
     scroll-behavior: smooth;
 
@@ -7,19 +10,31 @@ html {
 body {
     margin: 0;
     height: 100%;
+    background-color: #d9dcd6;
 }
 
 
 /* haut de Page */
 header {
-    background-image: url("../img/4.jpg");
     background-size: cover;
-    height: 94vh;
+    height: 70vh;
     padding: 25px;
     font-family: "Times New Roman", Times, serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 1000;
+
+}
+
+.video-background-0 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .Titre {
@@ -70,7 +85,6 @@ nav li a:hover {
     font-weight: 100;
     position: relative;
     margin-bottom: 40px;
-
 }
 
 .Titre2::before  {
@@ -89,19 +103,12 @@ nav li a:hover {
     font-family: Arial, sans-serif;
     position: relative;
     width: 100%;
-    height: 75vh;
+    height: 50vh;
     overflow: hidden;
+    background-image: url("../img/4.jpg");
+    background-size: cover;
+}
 
-}
-#video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75%;
-    object-fit: cover;
-    z-index: -1;
-}
 
 .sommaire .content {
     position: relative;
@@ -146,7 +153,7 @@ nav li a:hover {
 
 .sommaire-m li a {
     text-decoration: none;
-    color: #3A7CA5;
+    color: #d9dcd6;
     font-weight: bold;
     font-size: 1.2rem;
     transition: color 0.3s ease;
@@ -169,6 +176,13 @@ nav li a:hover {
 
 
 /* Introduction */
+#Introduction p{
+    font-family: 'Quicksand', sans-serif;
+    margin: 30px;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
 .hoverMap {
     position: relative;
     display: inline-block;
@@ -200,6 +214,7 @@ nav li a:hover {
 
 .hoverMap:hover {
     position: relative;
+
 }
 
 .hoverMap:hover::after {
@@ -209,8 +224,872 @@ nav li a:hover {
 }
 
 
+/* Histoire de la Ville */
+#Histoire {
+    padding: 20px;
+    background-color: #d9dcd6;
+}
+
+#Histoire table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#Histoire thead {
+    background-color: #f1e0b6;
+    color: #bb8d57;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+#Histoire th, #Histoire td {
+    padding: 15px;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #ccc;
+}
+
+#Histoire tbody td {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    background-color: #fafafa;
+}
+
+#Histoire tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#Histoire tbody tr:hover {
+    background-color: #f9e4b7;
+    transition: background-color 0.3s ease;
+}
+
+#Histoire th {
+    border-bottom: 2px solid #bb8d57;
+    text-align: center;
+}
+
+#Histoire td {
+    border-bottom: 1px solid #ddd;
+}
+
+#Histoire table caption {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #bb8d57;
+    margin-bottom: 20px;
+}
+
+#Histoire td:first-child {
+    color: #333;
+}
+
+/* Monuments et Sites */
+
+#Monuments h3{
+    text-align: center;
+    color : #bb8d57;
+    font-size: 1.5rem;
+}
+
+.grid-sites {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(13, auto);
+    gap: 20px;
+    padding: 30px;
+    align-items: stretch;
+}
+.grid-sites div {
+    color: #3A7CA5;
+    line-height: 1.5;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+
+}
 
 
-#Introduction {
-    margin-top: -230px;
+/* Vieux Port*/
+.video-background-VP {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.Vieux_Port_1 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.Vieux_Port_2 {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 550px;
+}
+
+
+/* Notre Dame*/
+.video-background-ND {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.Notre_Dame_1 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.Notre_Dame_2 {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 550px;
+}
+
+
+/* La Major*/
+.video-background-LM {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.La_Major_2 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.La_Major_1 {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 550px;
+}
+
+/* Mucem */
+.video-background-M {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.Mucem_2 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.Mucem_1 {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 550px;
+}
+
+/* Fort Saint Jean */
+.video-background-FSJ {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.Fort_Saint_Jean_1 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.Fort_Saint_Jean_2 {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 550px;
+}
+
+/* Fort Saint Nicolas */
+.video-background-FSN {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.Fort_Saint_Nicolas_2 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.Fort_Saint_Nicolas_1 {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 550px;
+}
+
+/* Chateau D'If */
+.video-background-CDI {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.Chateau_d_If_1 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.Chateau_d_If_2 {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 550px;
+}
+
+/* Palais du Pharo */
+.video-background-PP {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.Palais_du_Pharo_2 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.Palais_du_Pharo_1 {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 550px;
+}
+
+
+/* Palais Longchamp */
+.video-background-PL {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.Palais_Longchamp_1 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.Palais_Longchamp_2 {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 550px;
+}
+
+
+/* Le Corbusier */
+.video-background-LC {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.Le_Corbusier_2 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.Le_Corbusier_1 {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 550px;
+}
+
+
+/* Chateau Borely */
+.video-background-CB {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.Chateau_Borely_1 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.Chateau_Borely_2 {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 550px;
+}
+
+/* Escale Borely */
+.video-background-EB {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.Escale_Borely_2 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.Escale_Borely_1 {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 550px;
+}
+
+/* Stade Vélodrome */
+.video-background-V {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.Velodrome-1{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.Velodrome-2{
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 550px;
+}
+
+
+
+
+
+/* Culture Marseillaise */
+
+#Culture h3, th {
+    text-align: center;
+    color : #bb8d57;
+    font-size: 1.5rem;
+}
+
+.nom-artiste {
+    font-weight: bold;
+    color: #3A7CA5;
+    transition: color 0.3s ease;
+}
+
+.nom-artiste:hover {
+    color: #bb8d57;
+}
+
+
+
+.music {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+
+.timeline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin: 50px auto;
+    max-width: 1000px;
+    padding: 20px;
+    border-top: 3px solid #ccc;
+
+}
+
+.event {
+    position: relative;
+    width: 120px;
+    text-align: center;
+}
+
+.event::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: #bb8d57;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 0 3px #bb8d57;
+}
+
+.event h3 {
+    font-size: 1em;
+    margin: 10px 0 5px;
+}
+
+.event p {
+    font-size: 0.9em;
+    color: #3A7CA5;
+}
+
+.event a {
+    text-decoration: none;
+    color: #2F6690;
+
+}
+
+
+.sport table {
+    border-collapse: separate;
+}
+
+.Sport{
+    color : white;
+    text-align: justify;
+    font-size: 1.25rem;
+    }
+
+.OM{
+    color: #3A7CA5;
+    text-align: justify;
+    font-size: 1.25rem;
+
+    }
+
+.IAM {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color : #3A7CA5;
+}
+
+.IAM::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    background-image: url('../img/IAM.jpg');
+    background-size: cover;
+    background-position: center;
+    display: none;
+    pointer-events: none;
+    border: 2px solid #3A7CA5;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.IAM:hover::after {
+    display: block;
+}
+
+.IAM:hover {
+    position: relative;
+
+}
+
+.IAM:hover::after {
+    display: block;
+    top: 50%;
+    left: 50%;
+}
+
+
+.JUL {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color : #3A7CA5;
+}
+
+.JUL::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    background-image: url('../img/JUL.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: none;
+    pointer-events: none;
+    border: 2px solid #3A7CA5;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.JUL:hover::after {
+    display: block;
+}
+
+.JUL:hover {
+    position: relative;
+
+}
+
+.JUL:hover::after {
+    display: block;
+    top: 50%;
+    left: 50%;
+}
+
+
+.SCH {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color : #3A7CA5;
+}
+
+.SCH::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    background-image: url('../img/SCH.jpg');
+    background-size: cover;
+    background-position: center;
+    display: none;
+    pointer-events: none;
+    border: 2px solid #3A7CA5;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.SCH:hover::after {
+    display: block;
+}
+
+.SCH:hover {
+    position: relative;
+
+}
+
+.SCH:hover::after {
+    display: block;
+    top: 50%;
+    left: 50%;
+}
+
+
+.SOPRANO {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color : #3A7CA5;
+}
+
+.SOPRANO::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    background-image: url('../img/SOPRANO.jpg');
+    background-size: cover;
+    background-position: center;
+    display: none;
+    pointer-events: none;
+    border: 2px solid #3A7CA5;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.SOPRANO:hover::after {
+    display: block;
+}
+
+.SOPRANO:hover {
+    position: relative;
+
+}
+
+.SOPRANO:hover::after {
+    display: block;
+    top: 50%;
+    left: 50%;
+}
+
+.gastronomie{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.postit {
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+    color: #3A7CA5;
+    margin: 0 12px;
+}
+
+.postit:hover::after {
+    content: attr(data-info);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    background-color: #fef3bd;
+    color: #333;
+    padding: 10px;
+    margin-top: 8px;
+    width: 220px;
+    border: 1px solid #E9DB9F;
+    border-radius: 4px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    white-space: normal;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+
+
+/* Vie à Marseille */
+
+/* Plages et Été */
+
+/* Marseille et la Provence */
+.grid-Provences {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    padding: 30px;
+    align-items: stretch;
+}
+
+.grid-Provences div {
+    color: #3A7CA5;
+    line-height: 1.5;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.Cassis{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.Cassis2{
+    background-image: url('../img/Cassis.jpg');
+}
+
+.Bandol{
+    background-image: url('../img/Bandol.jpeg');
+}
+
+.Bandol2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.Ciotat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.Ciotat2{
+    background-image: url('../img/Ciotat.jpg');
+}
+
+.Aix{
+    background-image: url('../img/Aix.jpg');
+}
+
+.Aix2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+/* Marseille dans le Monde */
+
+
+
+
+
+/* Conclusion */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    /* Ajustement du header et du titre */
+    header {
+        height: auto;
+        padding: 15px;
+    }
+    .Titre {
+        font-size: 3rem;
+        margin: 10px 0;
+    }
+
+    /* Navigation : passera en colonne */
+    nav {
+        display: block;
+        margin-top: 20px;
+    }
+    nav ul {
+        display: block;
+        text-align: center;
+        padding: 0;
+    }
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+    nav li a {
+        display: inline-block;
+        padding: 8px 15px;
+    }
+
+    /* Sommaire */
+    .sommaire {
+        height: auto;
+        padding: 30px 10px;
+    }
+    .sommaire .sommaire-m {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 15px;
+    }
+    .sommaire-m li {
+        height: auto;
+    }
+
+    /* Sections de présentation (sections .grid-sites, etc.) */
+    .grid-sites {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .grid-sites div {
+        padding: 15px;
+    }
+
+    /* Ajustement des titres */
+    .Titre2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    /* Ajustement des vidéos si nécessaire */
+    video {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Ajustement des tableaux pour qu’ils défilent (optionnel) */
+    table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+    }
+    th, td {
+        min-width: 120px;
+    }
 }
