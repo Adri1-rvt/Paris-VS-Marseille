@@ -18,14 +18,11 @@
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-    
     <img id="bannière" src="../img/votez.png" alt="Magnifique image de Paris">
-    
     <div class="container">
         <div class="section">
             <h2>Tableau de comparaison</h2>
             <p>Voici un petit tableau qui va vous aider à comparer les 2 villes pour finaliser votre choix de vote :</p>
-            
             <div class="comparison-table">
                 <div class="table-header">
                     <div class="header-cell paris-header">
@@ -37,64 +34,58 @@
                         <span>La Cité Phocéenne</span>
                     </div>
                 </div>
-                
                 <div class="table-row">
                     <div class="row-label">Population</div>
                     <div class="cell paris-cell">2,2 millions d'hab.</div>
                     <div class="cell marseille-cell">870 000 hab.</div>
                 </div>
-                
                 <div class="table-row">
                     <div class="row-label">Climat</div>
                     <div class="cell paris-cell">Continental tempéré</div>
                     <div class="cell marseille-cell">Méditerranéen</div>
                 </div>
-                
                 <div class="table-row">
                     <div class="row-label">Situation</div>
                     <div class="cell paris-cell">Île-de-France (Nord)</div>
                     <div class="cell marseille-cell">Provence (Sud)</div>
                 </div>
-                
                 <div class="table-row">
                     <div class="row-label">Fondation</div>
                     <div class="cell paris-cell">IIIe siècle av. J.-C.</div>
                     <div class="cell marseille-cell">600 av. J.-C.</div>
                 </div>
-                
                 <div class="table-row">
                     <div class="row-label">Spécialités</div>
                     <div class="cell paris-cell">Haute couture, gastronomie, bon club de foot</div>
                     <div class="cell marseille-cell">Bouillabaisse, pastis, authenticité</div>
                 </div>
-                
                 <div class="table-row">
                     <div class="row-label">Monuments</div>
                     <div class="cell paris-cell">Tour Eiffel, Louvre...</div>
                     <div class="cell marseille-cell">Notre-Dame de la Garde</div>
                 </div>
-                
                 <div class="table-row">
                     <div class="row-label">Équipe de foot</div>
                     <div class="cell paris-cell">Paris Saint-Germain</div>
                     <div class="cell marseille-cell">Olympique de Marseille</div>
                 </div>
-                
+                <div class="table-row">
+                    <div class="row-label">Ligue des Champions</div>
+                    <div class="cell paris-cell">1</div>
+                    <div class="cell marseille-cell">1 (#corruption)</div>
+                </div>
                 <div class="table-row">
                     <div class="row-label">Surnom</div>
                     <div class="cell paris-cell">"Ville Lumière"</div>
                     <div class="cell marseille-cell">"Porte de l'Orient"</div>
                 </div>
-                
                 <div class="table-row">
                     <div class="row-label">Atouts</div>
                     <div class="cell paris-cell">Culture, politique, business</div>
-                    <div class="cell marseille-cell">Soleil, mer, authenticité</div>
+                    <div class="cell marseille-cell">Soleil, mer, plage</div>
                 </div>
             </div>
         </div>
-
-        <!-- Vote Form Section -->
         <div class="section">
             <div class="vote-form">
                 <h3>Votez pour votre ville préférée !</h3>
@@ -105,19 +96,16 @@
                             <h4>Paris</h4>
                             <p>La Ville Lumière vous fait vibrer ? (excellent choix)</p>
                         </label>
-                        
                         <label class="vote-option" for="marseille">
                             <input type="radio" id="marseille" name="ville" value="marseille">
                             <h4>Marseille</h4>
                             <p>La Cité Phocéenne a votre cœur ?</p>
                         </label>
                     </div>
-
                     <div class="form-group">
                         <label for="nom">Votre nom :</label>
                         <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
                     </div>
-
                     <div class="form-group">
                         <label for="age">Votre âge :</label>
                         <select id="age" name="age" required>
@@ -129,15 +117,12 @@
                             <option value="plus-50">Plus de 50 ans</option>
                         </select>
                     </div>
-
                     <div class="form-group">
                         <label for="raison">Pourquoi ce choix ? (optionnel)</label>
                         <textarea id="raison" name="raison" rows="3" placeholder="Expliquez brièvement votre choix..."></textarea>
                     </div>
-
                     <button type="submit" class="submit-btn">Voter maintenant !</button>
                 </form>
-
                 <div class="results" id="results">
                     <h4>Résultats des votes</h4>
                     <div style="margin: 2rem 0;">
@@ -145,7 +130,6 @@
                         <div class="result-bar">
                             <div class="result-fill paris" id="parisBar" style="width: 0%"></div>
                         </div>
-                        
                         <p><strong>Marseille :</strong> <span id="marseilleVotes">0</span> votes (<span id="marseillePercent">0</span>%)</p>
                         <div class="result-bar">
                             <div class="result-fill marseille" id="marseilleBar" style="width: 0%"></div>
@@ -156,10 +140,8 @@
             </div>
         </div>
     </div>
-
     <footer>
         <p>Tous droits réservés | Par Adrien & Thomas <a href="contact.css">A propos | Nous contacter</a></p>
     </footer>
-
 </body>
 </html>

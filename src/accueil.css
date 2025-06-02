@@ -18,7 +18,6 @@ body {
     background: linear-gradient(135deg, var(--platinum) 0%, #f0f2f0 100%);
 }
 
-/* header et footer */
 header {
     position: fixed;
     top: 0;
@@ -71,65 +70,6 @@ footer a {
     color:#3a7ca5;
 }
 
-/* Hero Section */
-.hero {
-    background: linear-gradient(rgba(22, 66, 91, 0.7), rgba(47, 102, 144, 0.7)), 
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%232F6690" width="1200" height="600"/><circle fill="%233A7CA5" cx="300" cy="150" r="100" opacity="0.3"/><circle fill="%2316425B" cx="900" cy="450" r="150" opacity="0.2"/><rect fill="%23D9DCD6" x="400" y="200" width="400" height="200" opacity="0.1" rx="20"/></svg>');
-    background-size: cover;
-    background-position: center;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    position: relative;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, var(--indigo-dye), var(--lapis-lazuli), var(--cerulean));
-    opacity: 0.8;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    padding: 0 2rem;
-}
-
-.hero h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    animation: fadeInUp 1s ease-out;
-}
-
-.hero p {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-    animation: fadeInUp 1s ease-out 0.3s both;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Main Content */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -164,37 +104,6 @@ footer a {
     height: 3px;
     background: var(--cerulean);
     border-radius: 2px;
-}
-
-.attractions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.attraction-card {
-    background: linear-gradient(135deg, var(--platinum) 0%, white 100%);
-    border-radius: 15px;
-    padding: 2rem;
-    transition: all 0.3s ease;
-    border-left: 4px solid var(--cerulean);
-    position: relative;
-    overflow: hidden;
-}
-
-.attraction-card h3 {
-    color: var(--indigo-dye);
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    position: relative;
-    z-index: 2;
-}
-
-.attraction-card p {
-    color: var(--lapis-lazuli);
-    position: relative;
-    z-index: 2;
 }
 
 .highlight {
@@ -242,24 +151,7 @@ img {
     margin-top: 4%;
 }
 
-
-
-
-
-
-
-
-
-
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1.1rem;
-    }
-
     .section h2 {
         font-size: 2rem;
     }

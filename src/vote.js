@@ -1,21 +1,15 @@
-// Données des votes (stockées en mémoire persistante)
 let votes = loadVotes();
-
-// Sélection des options de vote
 const voteOptions = document.querySelectorAll('.vote-option');
 const radioButtons = document.querySelectorAll('input[name="ville"]');
 
-// Gestion de la sélection visuelle
 voteOptions.forEach(option => {
     option.addEventListener('click', function () {
-        // Retirer la classe selected de toutes les options
         voteOptions.forEach(opt => opt.classList.remove('selected'));
-        // Ajouter la classe selected à l'option cliquée
         this.classList.add('selected');
     });
 });
 
-// Gestion du formulaire
+
 document.getElementById('voteForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -30,7 +24,7 @@ document.getElementById('voteForm').addEventListener('submit', function (e) {
         return;
     }
 
-    // Vérifier si la personne a déjà voté
+    // pas 2 mm votes
     const hasVoted = votes.voters.some(voter =>
         voter.nom.toLowerCase() === nom.toLowerCase()
     );
@@ -40,7 +34,6 @@ document.getElementById('voteForm').addEventListener('submit', function (e) {
         return;
     }
 
-    // Enregistrer le vote
     votes[ville]++;
     votes.voters.push({
         nom: nom,
@@ -50,16 +43,11 @@ document.getElementById('voteForm').addEventListener('submit', function (e) {
         timestamp: new Date()
     });
 
-    // Sauvegarder en mémoire persistante
+    // mémoire persistante
     saveVotes();
 
-    // Afficher un message de confirmation
     alert(`Merci ${nom} ! Votre vote pour ${ville === 'paris' ? 'Paris' : 'Marseille'} a été enregistré.`);
-
-    // Mettre à jour l'affichage des résultats
     updateResults();
-
-    // Réinitialiser le formulaire
     this.reset();
     voteOptions.forEach(opt => opt.classList.remove('selected'));
 });
@@ -69,25 +57,20 @@ function updateResults() {
     const parisPercent = total > 0 ? Math.round((votes.paris / total) * 100) : 0;
     const marseillePercent = total > 0 ? Math.round((votes.marseille / total) * 100) : 0;
 
-    // Mettre à jour les textes
+    // maj
     document.getElementById('parisVotes').textContent = votes.paris;
     document.getElementById('marseilleVotes').textContent = votes.marseille;
     document.getElementById('parisPercent').textContent = parisPercent;
     document.getElementById('marseillePercent').textContent = marseillePercent;
     document.getElementById('totalVotes').textContent = total;
-
-    // Mettre à jour les barres de progression
     document.getElementById('parisBar').style.width = parisPercent + '%';
     document.getElementById('marseilleBar').style.width = marseillePercent + '%';
-
-    // Afficher la section des résultats
     const resultsSection = document.getElementById('results');
     resultsSection.classList.add('show');
 }
 
-// Initialiser quelques votes de démonstration
+// demo
 function initDemo() {
-    // Ne pas écraser les données existantes
     if (
         votes.paris === 0 &&
         votes.marseille === 0 &&
@@ -97,13 +80,13 @@ function initDemo() {
         votes.marseille = 0;
         votes.voters = [
             {
-                nom: 'Demo User 1',
+                nom: 'Demo Adrien',
                 ville: 'paris',
-                age: '25-35',
-                raison: 'Culture incroyable'
+                age: '18-25',
+                raison: 'Pariissssss'
             },
             {
-                nom: 'Demo User 2',
+                nom: 'Demo Thomas',
                 ville: 'marseille',
                 age: '18-25',
                 raison: 'Le soleil et la mer'
@@ -114,7 +97,6 @@ function initDemo() {
     updateResults();
 }
 
-// Fonctions de sauvegarde/chargement
 function saveVotes() {
     try {
         const votesJson = JSON.stringify(votes);
@@ -133,8 +115,6 @@ function loadVotes() {
     } catch (e) {
         console.error('Erreur lors du chargement des votes depuis localStorage :', e);
     }
-
-    // Valeurs par défaut si rien dans localStorage
     return {
         paris: 0,
         marseille: 0,
@@ -142,5 +122,4 @@ function loadVotes() {
     };
 }
 
-// Lancer la démo au chargement
 initDemo();
