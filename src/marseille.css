@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
 
-
 html {
     scroll-behavior: smooth;
-
 }
-
 
 body {
     margin: 0;
@@ -13,8 +10,14 @@ body {
     background-color: #d9dcd6;
 }
 
+video{
+    border-radius: 15px;
+    overflow: hidden;
+}
 
-/* haut de Page */
+
+
+/* ===== HEADER ET NAVIGATION ===== */
 header {
     background-size: cover;
     height: 70vh;
@@ -24,7 +27,7 @@ header {
     flex-direction: column;
     justify-content: center;
     z-index: 1000;
-
+    position: relative;
 }
 
 .video-background-0 {
@@ -46,8 +49,6 @@ header {
     margin: 0;
 }
 
-
-/* Navigation */
 nav {
     display: flex;
     justify-content: space-around;
@@ -61,24 +62,27 @@ nav {
 
 nav li {
     display: inline-block;
-    margin-right: 70px;
+    margin-right: 20px;
+}
 
+nav li:last-child {
+    margin-right: 0;
 }
 
 nav li a {
-    color: white;
+    color: #d9dcd6;
     text-decoration: none;
     font-size: 1.2rem;
     padding: 10px 20px;
     transition: color 0.3s ease;
+    display: block;
 }
 
 nav li a:hover {
     color: #bb8d57;
 }
 
-
-/* Titre */
+/* ===== TITRES ===== */
 .Titre2 {
     font-size: 50px;
     font-family: 'Abril FatFace', serif;
@@ -87,17 +91,16 @@ nav li a:hover {
     margin-bottom: 40px;
 }
 
-.Titre2::before  {
+.Titre2::before {
     background-color: #3A7CA5;
-    content:"" ;
+    content: "";
     position: absolute;
     width: 50px;
     height: 7px;
     bottom: 0;
-
 }
 
-/* Sommaire */
+/* ===== SOMMAIRE ===== */
 .sommaire {
     padding: 50px 0;
     font-family: Arial, sans-serif;
@@ -105,10 +108,10 @@ nav li a:hover {
     width: 100%;
     height: 50vh;
     overflow: hidden;
-    background-image: url("../img/4.jpg");
+    background-image: url("../img/4_2.jpg");
     background-size: cover;
+    background-position: center;
 }
-
 
 .sommaire .content {
     position: relative;
@@ -118,21 +121,10 @@ nav li a:hover {
     color: white;
 }
 
-.sommaire .sommaire-m {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    gap: 10px;
-    list-style: none;
-    padding: 0;
-    max-width: 1000px;
-    margin: auto;
-}
-
-
 .sommaire-m {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(3,1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 10px;
     padding: 0;
     list-style: none;
@@ -141,7 +133,6 @@ nav li a:hover {
     margin: auto;
     text-align: center;
 }
-
 
 .sommaire-m li {
     display: flex;
@@ -157,7 +148,6 @@ nav li a:hover {
     font-weight: bold;
     font-size: 1.2rem;
     transition: color 0.3s ease;
-
 }
 
 .sommaire-m li a:hover {
@@ -175,8 +165,8 @@ nav li a:hover {
 .m9 { grid-column: 9; grid-row: 3; }
 
 
-/* Introduction */
-#Introduction p{
+/* ===== INTRODUCTION ===== */
+#Introduction p {
     font-family: 'Quicksand', sans-serif;
     margin: 30px;
     font-size: 1.25rem;
@@ -187,7 +177,7 @@ nav li a:hover {
     position: relative;
     display: inline-block;
     cursor: pointer;
-    color : #3A7CA5;
+    color: #3A7CA5;
 }
 
 .hoverMap::after {
@@ -210,21 +200,12 @@ nav li a:hover {
 
 .hoverMap:hover::after {
     display: block;
-}
-
-.hoverMap:hover {
-    position: relative;
-
-}
-
-.hoverMap:hover::after {
-    display: block;
     top: 50%;
     left: 50%;
 }
 
 
-/* Histoire de la Ville */
+/* ===== HISTOIRE ===== */
 #Histoire {
     padding: 20px;
     background-color: #d9dcd6;
@@ -286,11 +267,11 @@ nav li a:hover {
     color: #333;
 }
 
-/* Monuments et Sites */
 
-#Monuments h3{
+/* ===== MONUMENTS ET SITES ===== */
+#Monuments h3 {
     text-align: center;
-    color : #bb8d57;
+    color: #bb8d57;
     font-size: 1.5rem;
 }
 
@@ -302,6 +283,7 @@ nav li a:hover {
     padding: 30px;
     align-items: stretch;
 }
+
 .grid-sites div {
     color: #3A7CA5;
     line-height: 1.5;
@@ -309,304 +291,12 @@ nav li a:hover {
     border-radius: 10px;
     text-align: center;
     font-weight: bold;
-
 }
 
-
-/* Vieux Port*/
-.video-background-VP {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.Vieux_Port_1 {
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.Vieux_Port_2 {
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: 550px;
-}
-
-
-/* Notre Dame*/
-.video-background-ND {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.Notre_Dame_1 {
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.Notre_Dame_2 {
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: 550px;
-}
-
-
-/* La Major*/
-.video-background-LM {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.La_Major_2 {
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.La_Major_1 {
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: 550px;
-}
-
-/* Mucem */
-.video-background-M {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.Mucem_2 {
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.Mucem_1 {
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: 550px;
-}
-
-/* Fort Saint Jean */
-.video-background-FSJ {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.Fort_Saint_Jean_1 {
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.Fort_Saint_Jean_2 {
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: 550px;
-}
-
-/* Fort Saint Nicolas */
-.video-background-FSN {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.Fort_Saint_Nicolas_2 {
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.Fort_Saint_Nicolas_1 {
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: 550px;
-}
-
-/* Chateau D'If */
-.video-background-CDI {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.Chateau_d_If_1 {
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.Chateau_d_If_2 {
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: 550px;
-}
-
-/* Palais du Pharo */
-.video-background-PP {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.Palais_du_Pharo_2 {
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.Palais_du_Pharo_1 {
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: 550px;
-}
-
-
-/* Palais Longchamp */
-.video-background-PL {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.Palais_Longchamp_1 {
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.Palais_Longchamp_2 {
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: 550px;
-}
-
-
-/* Le Corbusier */
-.video-background-LC {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.Le_Corbusier_2 {
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.Le_Corbusier_1 {
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: 550px;
-}
-
-
-/* Chateau Borely */
-.video-background-CB {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.Chateau_Borely_1 {
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.Chateau_Borely_2 {
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: 550px;
-}
-
-/* Escale Borely */
-.video-background-EB {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.Escale_Borely_2 {
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.Escale_Borely_1 {
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: 550px;
-}
-
-/* Stade Vélodrome */
+.video-background-VP, .video-background-ND, .video-background-LM,
+.video-background-M, .video-background-FSJ, .video-background-FSN,
+.video-background-CDI, .video-background-PP, .video-background-PL,
+.video-background-LC, .video-background-CB, .video-background-EB,
 .video-background-V {
     position: absolute;
     top: 0;
@@ -617,13 +307,17 @@ nav li a:hover {
     z-index: -1;
 }
 
-.Velodrome-1{
+.Vieux_Port_1, .Notre_Dame_1, .La_Major_2, .Mucem_2, .Fort_Saint_Jean_1,
+.Fort_Saint_Nicolas_2, .Chateau_d_If_1, .Palais_du_Pharo_2, .Palais_Longchamp_1,
+.Le_Corbusier_2, .Chateau_Borely_1, .Escale_Borely_2, .Velodrome-1 {
     display: flex;
     align-items: center;
     text-align: center;
 }
 
-.Velodrome-2{
+.Vieux_Port_2, .Notre_Dame_2, .La_Major_1, .Mucem_1, .Fort_Saint_Jean_2,
+.Fort_Saint_Nicolas_1, .Chateau_d_If_2, .Palais_du_Pharo_1, .Palais_Longchamp_2,
+.Le_Corbusier_1, .Chateau_Borely_2, .Escale_Borely_1, .Velodrome-2 {
     position: relative;
     overflow: hidden;
     display: grid;
@@ -631,14 +325,10 @@ nav li a:hover {
 }
 
 
-
-
-
-/* Culture Marseillaise */
-
+/* ===== CULTURE ===== */
 #Culture h3, th {
     text-align: center;
-    color : #bb8d57;
+    color: #bb8d57;
     font-size: 1.5rem;
 }
 
@@ -652,14 +342,10 @@ nav li a:hover {
     color: #bb8d57;
 }
 
-
-
 .music {
     text-align: center;
     font-size: 1.5rem;
 }
-
-
 
 .timeline {
     display: flex;
@@ -671,7 +357,6 @@ nav li a:hover {
     max-width: 1000px;
     padding: 20px;
     border-top: 3px solid #ccc;
-
 }
 
 .event {
@@ -707,158 +392,48 @@ nav li a:hover {
 .event a {
     text-decoration: none;
     color: #2F6690;
-
 }
-
 
 .sport table {
     border-collapse: separate;
 }
 
-.Sport{
-    color : white;
+.Sport {
+    color: white;
     text-align: justify;
     font-size: 1.25rem;
-    }
+}
 
-.OM{
+.OM {
     color: #3A7CA5;
     text-align: justify;
     font-size: 1.25rem;
+}
 
-    }
-
-.IAM {
+.IAM, .JUL, .SCH, .SOPRANO {
     position: relative;
     display: inline-block;
     cursor: pointer;
-    color : #3A7CA5;
+    color: #3A7CA5;
 }
 
 .IAM::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 200px;
     background-image: url('../img/IAM.jpg');
-    background-size: cover;
-    background-position: center;
-    display: none;
-    pointer-events: none;
-    border: 2px solid #3A7CA5;
-    border-radius: 10px;
-    z-index: 10;
-}
-
-.IAM:hover::after {
-    display: block;
-}
-
-.IAM:hover {
-    position: relative;
-
-}
-
-.IAM:hover::after {
-    display: block;
-    top: 50%;
-    left: 50%;
-}
-
-
-.JUL {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    color : #3A7CA5;
 }
 
 .JUL::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 200px;
     background-image: url('../img/JUL.jpeg');
-    background-size: cover;
-    background-position: center;
-    display: none;
-    pointer-events: none;
-    border: 2px solid #3A7CA5;
-    border-radius: 10px;
-    z-index: 10;
-}
-
-.JUL:hover::after {
-    display: block;
-}
-
-.JUL:hover {
-    position: relative;
-
-}
-
-.JUL:hover::after {
-    display: block;
-    top: 50%;
-    left: 50%;
-}
-
-
-.SCH {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    color : #3A7CA5;
 }
 
 .SCH::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 200px;
     background-image: url('../img/SCH.jpg');
-    background-size: cover;
-    background-position: center;
-    display: none;
-    pointer-events: none;
-    border: 2px solid #3A7CA5;
-    border-radius: 10px;
-    z-index: 10;
-}
-
-.SCH:hover::after {
-    display: block;
-}
-
-.SCH:hover {
-    position: relative;
-
-}
-
-.SCH:hover::after {
-    display: block;
-    top: 50%;
-    left: 50%;
-}
-
-
-.SOPRANO {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    color : #3A7CA5;
 }
 
 .SOPRANO::after {
+    background-image: url('../img/SOPRANO.jpg');
+}
+
+.IAM::after, .JUL::after, .SCH::after, .SOPRANO::after {
     content: "";
     position: absolute;
     top: 0;
@@ -866,7 +441,6 @@ nav li a:hover {
     transform: translate(-50%, -50%);
     width: 300px;
     height: 200px;
-    background-image: url('../img/SOPRANO.jpg');
     background-size: cover;
     background-position: center;
     display: none;
@@ -876,22 +450,13 @@ nav li a:hover {
     z-index: 10;
 }
 
-.SOPRANO:hover::after {
-    display: block;
-}
-
-.SOPRANO:hover {
-    position: relative;
-
-}
-
-.SOPRANO:hover::after {
+.IAM:hover::after, .JUL:hover::after, .SCH:hover::after, .SOPRANO:hover::after {
     display: block;
     top: 50%;
     left: 50%;
 }
 
-.gastronomie{
+.gastronomie {
     text-align: center;
     font-size: 1.5rem;
 }
@@ -925,12 +490,158 @@ nav li a:hover {
 }
 
 
+/* ===== VIE À MARSEILLE ===== */
+.vie-container {
+    position: relative;
+    min-height: 500px;
+}
 
-/* Vie à Marseille */
+.floating-wrapper {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
 
-/* Plages et Été */
+.floating-box {
+    position: absolute;
+    width: 200px;
+    text-align: center;
+    height: 50px;
+    background-color: #3A7CA5;
+    color: #d9dcd6;
+    border-radius: 8px;
+    transition: transform 2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-/* Marseille et la Provence */
+.floating-box:hover {
+    color: #bb8d57;
+}
+
+
+/* ===== PLAGES ET ÉTÉ ===== */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 1.6rem;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    letter-spacing: 1px;
+}
+
+.path {
+    position: relative;
+}
+
+.path-svg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.path-line {
+    fill: none;
+    stroke: #3498db;
+    stroke-width: 2;
+    stroke-dasharray: 5,5;
+    opacity: 1;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    gap: 20px;
+}
+
+.row.top {
+    align-items: flex-start;
+}
+
+.row.bottom {
+    align-items: flex-end;
+}
+
+.card {
+    background: #3A7CA5;
+    border-radius: 6px;
+    padding: 12px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    max-width: 250px;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.card h2 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #D9D9D9;
+    text-align :center;
+}
+
+.card p {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    color: #bb8d57;
+    text-align :center;
+}
+
+.card-number {
+    display: none;
+}
+
+.highlight {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    margin: 40px auto 0;
+    text-align: center;
+    max-width: 400px;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.highlight h2 {
+    color: white;
+    opacity: 0.95;
+}
+
+.highlight p {
+    color: rgba(255,255,255,0.9);
+}
+
+
+/* ===== PROVENCE ===== */
+
+
+#Provence h3 {
+    text-align: center;
+    color: #bb8d57;
+    font-size: 1rem;
+}
+
 .grid-Provences {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -947,149 +658,166 @@ nav li a:hover {
     border-radius: 10px;
     text-align: center;
     font-weight: bold;
-
+    height: 100%;
 }
 
-.Cassis{
-    display: flex;
+.grid-Provences h3 {
+    text-align: center;
+    color: #bb8d57;
+    font-size: 1.3rem;
+}
+
+.Cassis {
     flex-direction: column;
+    margin-top: 100px;
+    display: flex;
     align-items: center;
     text-align: center;
 }
 
-.Cassis2{
-    background-image: url('../img/Cassis.jpg');
+.Cassis2 {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 550px;
 }
 
-.Bandol{
-    background-image: url('../img/Bandol.jpeg');
+.Bandol {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 550px;
 }
 
-.Bandol2{
-    display: flex;
+.Bandol2 {
+    margin-top: 100px;
     flex-direction: column;
+    display: flex;
     align-items: center;
     text-align: center;
 }
 
-.Ciotat{
-    display: flex;
+.Ciotat {
+    margin-top: 100px;
     flex-direction: column;
+    display: flex;
     align-items: center;
     text-align: center;
 }
 
-.Ciotat2{
-    background-image: url('../img/Ciotat.jpg');
+.Ciotat2 {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 550px;
 }
 
-.Aix{
-    background-image: url('../img/Aix.jpg');
+.Aix {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 550px;
 }
 
-.Aix2{
-    display: flex;
+.Aix2 {
+    margin-top: 100px;
     flex-direction: column;
+    display: flex;
     align-items: center;
     text-align: center;
 }
-/* Marseille dans le Monde */
+
+
+/* ===== MARSEILLE DANS LE MONDE ===== */
+
+.globe {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 30px;
+    align-items: center;
+}
+
+.text-block:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.text-block:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.text-block:nth-child(3) {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: center;
+    max-width: 400px;
+}
+
+.text-block:nth-child(4) {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.text-block:nth-child(5) {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.text-block {
+    background: linear-gradient(135deg, #2F6690 0%, #3A7CA5 100%);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #d9dcd6;
+}
+
+.text-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.text-block strong {
+    font-size: 1.4rem;
+    display: block;
+    margin-bottom: 10px;
+    color: #bb8d57;
+}
+
+
+/* ===== CONCLUSION ===== */
+.Conclusion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Conclusion img {
+    max-width: 70%;
+    height: auto;
+}
+
+
+/* ===== FOOTER ===== */
 
 
 
 
+footer p  {
+    font-size: 1vw;
+    text-align: center;
+}
 
-/* Conclusion */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* RESPONSIVE */
-
-@media (max-width: 768px) {
-    /* Ajustement du header et du titre */
-    header {
-        height: auto;
-        padding: 15px;
-    }
-    .Titre {
-        font-size: 3rem;
-        margin: 10px 0;
-    }
-
-    /* Navigation : passera en colonne */
-    nav {
-        display: block;
-        margin-top: 20px;
-    }
-    nav ul {
-        display: block;
-        text-align: center;
-        padding: 0;
-    }
-    nav li {
-        display: block;
-        margin: 10px 0;
-    }
-    nav li a {
-        display: inline-block;
-        padding: 8px 15px;
-    }
-
-    /* Sommaire */
-    .sommaire {
-        height: auto;
-        padding: 30px 10px;
-    }
-    .sommaire .sommaire-m {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        gap: 15px;
-    }
-    .sommaire-m li {
-        height: auto;
-    }
-
-    /* Sections de présentation (sections .grid-sites, etc.) */
-    .grid-sites {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-    .grid-sites div {
-        padding: 15px;
-    }
-
-    /* Ajustement des titres */
-    .Titre2 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-    }
-
-    /* Ajustement des vidéos si nécessaire */
-    video {
-        width: 100%;
-        height: auto;
-    }
-
-    /* Ajustement des tableaux pour qu’ils défilent (optionnel) */
-    table {
-        display: block;
-        overflow-x: auto;
-        width: 100%;
-    }
-    th, td {
-        min-width: 120px;
-    }
+footer a  {
+    font-size: 1vw;
+    color: #bb8d57;
 }
