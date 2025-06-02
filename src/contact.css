@@ -271,7 +271,15 @@ footer {
 
 }
 
-footer p a {
-     font-size: 1vw;
+footer p {
+    font-size: 1vw;
+    text-align: center;
     color: #d9dcd6;
  }
+
+footer  a {
+    font-size: 1vw;
+    text-align: center;
+    color: #d9dcd6;
+
+}
